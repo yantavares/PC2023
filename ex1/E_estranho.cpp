@@ -9,17 +9,18 @@ bool solve(string l)
     {
         if (l.length() >= 3)
         {
+
             if (l.substr(0, 3) == "144")
             {
-                l = l.substr(3, l.length() - 4);
+                l = l.substr(3);
             }
             else if (l.substr(0, 2) == "14")
             {
-                l = l.substr(2, l.length() - 3);
+                l = l.substr(2);
             }
             else if (l[0] == '1')
             {
-                l = l.substr(1, l.length() - 2);
+                l = l.substr(1);
             }
             else
             {
@@ -34,6 +35,7 @@ bool solve(string l)
         {
             return false;
         }
+        // cout << l << endl;
     }
 }
 
