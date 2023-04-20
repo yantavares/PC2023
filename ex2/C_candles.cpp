@@ -7,8 +7,8 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    int t, n, a, middle = 0, menor = INT_MAX, maior = -1, count = 0;
-    set<int> v;
+    int t, n, a, menor = INT_MAX, count = 0;
+    vector<int> v;
 
     cin >> t;
 
@@ -19,38 +19,22 @@ int main()
         {
 
             cin >> a;
-            middle += a;
-
-            if (a > maior)
-            {
-                maior = a;
-            }
             if (a < menor)
             {
                 menor = a;
             }
-            v.insert(a);
+            v.push_back(a);
         }
-
-        vector<char> s(v.begin(), v.end());
-
-        middle = middle / n;
         for (size_t k = 0; k < n; k++)
         {
-            if (s[k] < middle)
+            if (v[k] > menor)
             {
-                count += middle - s[k];
-            }
-            else
-            {
-                count += s[k] - middle;
+                count += v[k] - menor;
             }
         }
         cout << count << endl;
         count = 0;
         v.clear();
-        maior = -1;
-        middle = 0;
         menor = INT_MAX;
     }
 
