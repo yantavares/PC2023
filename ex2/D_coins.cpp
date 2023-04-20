@@ -7,12 +7,11 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    long count, k;
-    long long n;
+    long long t, k, n;
 
-    cin >> count;
+    cin >> t;
 
-    for (size_t i = 0; i < count; i++)
+    for (int i = 0; i < t; i++)
     {
         cin >> n >> k;
 
